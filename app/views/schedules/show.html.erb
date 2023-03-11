@@ -1,23 +1,23 @@
-<div class="container">
+<div class="container show-container">
   <div class="form-wrapper">
     <h2><%= @schedule.title %></h2>
     <div class="table-wrapper">
       <table class="table show-table">
         <tr>
           <th>開始日</th>
-          <td><%= @schedule.start_date %></td>
+          <td><%= l @schedule.start_date %></td>
         </tr>
         <tr>
           <th>終了日</th>
-          <td><%= @schedule.end_date %></td>
+          <td><%= l @schedule.end_date %></td>
         </tr>
         <tr>
           <th>終日</th>
-          <% if @schedule.all_day == true %>
-            <td>○<td>
-          <% else %>
-            <td><td>
-          <% end %>
+          <td>
+            <% if @schedule.all_day == true %>
+              ○
+            <% end %>
+          </td>
         </tr>
         <tr>
           <th>スケジュールメモ</th>
@@ -27,8 +27,8 @@
     </div>
 
     <div class="button-area">
-      <%= link_to "← 一覧に戻る", :schedules %>
-      <%= link_to "編集する", [:edit, @schedule] %>
+      <%= link_to "← 一覧に戻る", :schedules, class: "button return-button" %>
+      <%= link_to "編集する", [:edit, @schedule], class: "button edit-button" %>
     </div>
   <div>
 </div>

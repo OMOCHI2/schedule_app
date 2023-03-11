@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container edit-container">
   <div class="form-wrapper">
     <h2 class="title-text">予定を編集してください</h2>
     <%= render "shared/error", obj: @schedule %>
 
     <div class="table-wrapper">
       <%= form_with model: @schedule do |f| %>
-        <table class="table new-table">
+        <table class="table edit-table">
           <tr>
             <th><%= f.label :title, "タイトル" %></th>
             <td><%= f.text_field :title %></td>
@@ -28,13 +28,13 @@
 
           <tr>
             <th><%= f.label :memo, "スケジュールメモ" %></th>
-            <td><%= f.text_area :memo %></td>
+            <td><%= f.text_area :memo, class: "textarea" %></td>
           </tr>
         </table>
 
-        <div class="form-wrapper-buttons">
-          <%= f.submit "保存" %>
-          <%= link_to "キャンセル", :schedules %>
+        <div class="button-area">
+          <%= link_to "← 一覧に戻る", :schedules, class: "button return-button" %>
+          <%= f.submit "保存", class: "button  submit-button" %>
         </div>
       <% end %>
     </div>

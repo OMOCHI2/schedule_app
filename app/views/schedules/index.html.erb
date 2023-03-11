@@ -7,7 +7,7 @@
 <div class="container">
   <div class="header">
     <h2 class="title-text">予定一覧</h2>
-    <%= link_to "新規追加", :new_schedule, class: "title-button" %>
+    <%= link_to "新規追加", :new_schedule, class: "button title-button" %>
   </div>
 
   <div class="index-table-wrapper">
@@ -55,13 +55,11 @@
   </div>
 
   <div class="footer">
-    <div class="footer-body">
-      <p class="footer-count">
-        予定合計
-        <span><%= Schedule.count %></span>
-        件
-      </p>
-      <p class="footer-date">本日の日付<%= Date.current.strftime("%Y/%m/%d") %></p>
-    </div>
+    <p class="footer-count">
+      予定合計
+      <span><%= Schedule.count %></span>
+      件
+    </p>
+    <p class="footer-date">本日の日付<%= Date.current.strftime("%Y/%m/%d") %></p>
   </div>
 </div>

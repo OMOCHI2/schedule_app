@@ -6,7 +6,7 @@ class Schedule < ApplicationRecord
   validates :memo, length: { maximum: 500 }
 
   def end_date_check
-    if self.start_date > self.end_date
+    if self.start_date != nil && self.end_date != nil && self.start_date > self.end_date
       errors.add(:end_date, "は開始日より前の日付は選択出来ません。")
     end
   end
