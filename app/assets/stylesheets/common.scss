@@ -32,7 +32,6 @@ table, tbody, td, th, thead, tr {
 .header-bar {
   background-color: #1c1d3b;
   height: 60px;
-  margin-bottom: 30px;
 }
 
 .header-text {
@@ -44,9 +43,22 @@ table, tbody, td, th, thead, tr {
   margin: 0 auto;
 }
 
+.notice {
+  height: 45px;
+  background-color: #ffd6d6;
+}
+
+.notice-text {
+  font-size: 14px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+
 .container {
   max-width: 840px;
   width: 100%;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
